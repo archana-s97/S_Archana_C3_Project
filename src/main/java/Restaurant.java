@@ -33,7 +33,7 @@ public class Restaurant {
     }
 
     public boolean isRestaurantOpen() {
-        LocalTime time = LocalTime.now();
+        LocalTime time = getCurrentTime();
         int isStillOpen = time.compareTo(closingTime);
         int isOpen = time.compareTo(openingTime);
         if(isStillOpen<0&&isOpen>=0){
